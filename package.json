@@ -1,0 +1,24 @@
+{
+  "name": "exampleproject",
+  "version": "1.0.0",
+  "description": "MEAN stack example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "express-validator": "^6.11.1",
+    "jsonwebtoken": "*",
+    "mongoose": "*",
+    "nodemon": "^2.0.7",
+    "passport": "*",
+    "passport-jwt": "*"
+  },
+  "author": "Miklos Oravecz",
+  "license": "ISC"
+}

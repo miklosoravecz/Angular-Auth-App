@@ -1,0 +1,57 @@
+<div class="home" *ngIf="!authService.loggedIn()">
+  <section class="section">
+    <h1 class="title">
+      Welcome to the <strong class="has-text-warning">{{ title }}</strong> !
+    </h1>
+    <h2 class="subtitle">
+      This is a MEAN authentication application built by Miklos Oravecz.
+    </h2>
+  </section>
+  <section class="section">
+    <h1 class="is-size-2">
+      To enter the site first you need to
+      <a [routerLink]="['/register']" class="has-text-warning">register</a>.
+    </h1>
+    <h2 class="is-size-3">
+      If you have already registered, you can log in here:
+      <br />
+      <div class="columns is-centered p-5">
+        <a [routerLink]="['/login']" class="has-text-primary-dark">
+          <fa-icon [icon]="faSignInAlt" size="6x"></fa-icon
+        ></a>
+      </div>
+    </h2>
+  </section>
+</div>
+<div class="home" *ngIf="authService.loggedIn()">
+  <section class="section">
+    <h1 class="title is-size-1">
+      Welcome
+      <span class="has-text-warning">{{
+        authService.decodedToken?.data.username
+      }}</span
+      >!
+    </h1>
+    <h2 class="subtitle">You are succesfully logged in.</h2>
+    <img
+      src="https://cdn.pixabay.com/photo/2016/03/22/22/27/dunes-1273814_960_720.jpg"
+      alt="enterPic"
+    />
+  </section>
+  <section class="section">
+    <div class="card-body">
+      <h1 class="title is-size-3">
+        Now you can visit you own profile
+        <a [routerLink]="['/profile']" class="has-text-warning">
+          <fa-icon [icon]="faUser" size="2x"></fa-icon
+        ></a>
+      </h1>
+      <h1 class="title is-size-4">
+        Or you can check all users
+        <a [routerLink]="['/users']" class="has-text-warning">
+          <fa-icon [icon]="faUsers"></fa-icon
+        ></a>
+      </h1>
+    </div>
+  </section>
+</div>

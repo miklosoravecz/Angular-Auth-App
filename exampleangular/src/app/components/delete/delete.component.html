@@ -1,0 +1,34 @@
+<section class="user-profile">
+  <div class="container">
+    <div class="card p-2">
+      <h1 class="card-title is-size-1">Delete profile</h1>
+      <img
+        class="card-img-top"
+        src="https://cdn.pixabay.com/photo/2014/03/25/15/19/cross-296507__340.png"
+        alt="Card image cap"
+      />
+      <div class="card-body">
+        <p class="card-text">
+          <b> {{ authService.decodedToken?.data.username }}</b> are you going to
+          delete your profile? If yes all data will lost!
+        </p>
+      </div>
+      <div class="field is-grouped">
+        <div class="control">
+          <button
+            (click)="onDeleteSubmit()"
+            type="submit"
+            class="button is-link"
+          >
+            Delete profile
+          </button>
+        </div>
+        <div class="control">
+          <button class="button is-link is-light" [routerLink]="['/edit']">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

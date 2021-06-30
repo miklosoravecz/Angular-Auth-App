@@ -1,0 +1,72 @@
+<form #f="ngForm" (ngSubmit)="onEditSubmit(f)">
+  <h2 class="title is-2">Edit profile</h2>
+  <div class="field">
+    <label class="label">New name</label>
+    <div class="control">
+      <input
+        name="name"
+        ngModel
+        required
+        #name="ngModel"
+        class="input"
+        type="text"
+        placeholder="{{ authService.decodedToken?.data.name }}"
+      />
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">New username</label>
+    <div class="control">
+      <input
+        name="username"
+        ngModel
+        required
+        #username="ngModel"
+        class="input"
+        type="text"
+        placeholder="{{ authService.decodedToken?.data.username }}"
+        value=""
+      />
+    </div>
+
+    <div class="field">
+      <label class="label">New password</label>
+      <div class="control">
+        <input
+          class="input"
+          type="password"
+          name="password"
+          ngModel
+          required
+          #password="ngModel"
+          placeholder="Type a new password"
+        />
+      </div>
+    </div>
+
+    <div class="field is-grouped">
+      <div class="control">
+        <button type="submit" class="button is-link" [disabled]="f.invalid">
+          Submit
+        </button>
+      </div>
+      <div class="control">
+        <button class="button is-link is-light" [routerLink]="['/']">
+          Cancel
+        </button>
+      </div>
+    </div>
+    <div class="field is-grouped">
+      <div class="control">
+        <button
+          type="submit"
+          class="button is-danger"
+          [routerLink]="['/delete']"
+        >
+          Delete profile
+        </button>
+      </div>
+    </div>
+  </div>
+</form>

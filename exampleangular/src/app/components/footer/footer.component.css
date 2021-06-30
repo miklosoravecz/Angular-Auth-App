@@ -1,0 +1,9 @@
+* {
+  text-align: right;
+  background-color: #f3e5f5;
+
+  position: fixed;
+  bottom: 0px;
+  height: 30px;
+  width: 100%;
+}

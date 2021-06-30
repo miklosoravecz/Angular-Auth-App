@@ -1,0 +1,61 @@
+<ngx-alerts></ngx-alerts>
+<nav
+  class="navbar has-background-light"
+  role="navigation"
+  aria-label="main navigation"
+>
+  <div class="navbar-brand">
+    <a class="navbar-item" [routerLink]="['/']">
+      <fa-icon [icon]="faChessRook" size="2x"></fa-icon>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" [routerLink]="['/']"> Home </a>
+      <a
+        class="navbar-item"
+        *ngIf="authService.loggedIn()"
+        [routerLink]="['/profile']"
+      >
+        {{ authService.decodedToken?.data.username }}'s profile
+      </a>
+      <a
+        class="navbar-item"
+        *ngIf="authService.loggedIn()"
+        [routerLink]="['/users']"
+      >
+        Users
+      </a>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a
+            class="button is-primary"
+            *ngIf="!authService.loggedIn()"
+            [routerLink]="['/register']"
+          >
+            <strong>Register</strong>
+          </a>
+          <a
+            class="button is-light"
+            *ngIf="!authService.loggedIn()"
+            [routerLink]="['/login']"
+          >
+            Log in
+          </a>
+          <a
+            class="button is-light"
+            (click)="logout()"
+            *ngIf="authService.loggedIn()"
+            [routerLink]="['/']"
+          >
+            Log out
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

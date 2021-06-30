@@ -1,0 +1,45 @@
+<form #f="ngForm" (ngSubmit)="onLoginSubmit(f)">
+  <h2 class="title is-2">Login</h2>
+  <div class="field">
+    <label class="label">Username</label>
+    <div class="control">
+      <input
+        name="username"
+        ngModel
+        required
+        #username="ngModel"
+        class="input"
+        type="text"
+        placeholder="User name"
+        value=""
+      />
+    </div>
+
+    <div class="field">
+      <label class="label">Password</label>
+      <div class="control">
+        <input
+          class="input"
+          type="password"
+          name="password"
+          ngModel
+          required
+          #password="ngModel"
+        />
+      </div>
+    </div>
+
+    <div class="field is-grouped">
+      <div class="control">
+        <button type="submit" class="button is-link" [disabled]="f.invalid">
+          Login
+        </button>
+      </div>
+      <div class="control">
+        <button class="button is-link is-light" [routerLink]="['/']">
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,16 @@
+.user-profile {
+  text-align: center;
+}
+.card-body {
+  background-color: rgb(245, 244, 243);
+  padding: 2rem;
+}
+img {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.field {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+}

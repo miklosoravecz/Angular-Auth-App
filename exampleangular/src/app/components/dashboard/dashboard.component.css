@@ -1,0 +1,23 @@
+.userlist {
+  text-align: center;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  flex-grow: 1;
+
+  flex-basis: 0;
+
+  margin: 1rem;
+  box-shadow: 5px 10px;
+}
+.card-body {
+  background-color: rgb(245, 244, 243);
+  padding: 2rem;
+}
+.title {
+  margin-top: 1rem;
+}
