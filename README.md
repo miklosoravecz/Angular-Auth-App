@@ -1,7 +1,7 @@
 # Angular-Auth-App
 Example MEAN-stack project
 
->*I made this app as a reference work. I used MongoDB, ExpressJs, NodeJs and Angular12.*
+>*I made this authentication app as a reference work. I used MongoDB, ExpressJs, NodeJs and Angular12.*
 
 ## To run this app:
 
@@ -10,3 +10,6 @@ Example MEAN-stack project
 - In the root folder run: **nodemon app.js** to launch the server.
 - In the exampleangular/src/app folder run command line and type: **ng serve** to start angular.
 - Open the browser and visit http://http://localhost:4200/
+
+## In the app:
+- You can register, login, edit user's data, delete user, check all registered users.
