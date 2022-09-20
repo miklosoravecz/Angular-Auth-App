@@ -10,7 +10,7 @@ Example MEAN-stack project
 - In the root folder run: **npm install** and **nodemon app.js** to launch the server.
 - In exampleangular folder run with command line **npm install**.
 - In the exampleangular/src/app folder run command line and type: **ng serve** to start angular.
-- Open the browser and visit http://http://localhost:4200/
+- Open the browser and visit http://localhost:4200/
 
 ## In the app:
 - You can register, login, edit user's data, delete user, check all registered users.
